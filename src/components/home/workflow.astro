@@ -1,0 +1,66 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Konsultasi & Identifikasi",
+    description: "Analisis mendalam terhadap jenis, volume, dan karakteristik kimia limbah B3 Anda untuk menentukan strategi pengelolaan yang paling aman dan efisien sesuai regulasi lingkungan terbaru.",
+  },
+  {
+    number: "02",
+    title: "Penawaran & Kontrak",
+    description: "Penyusunan struktur biaya yang transparan tanpa biaya tersembunyi, dilanjutkan dengan pengikatan kontrak kerjasama resmi yang menjamin komitmen kualitas dan perlindungan hukum bagi kedua belah pihak.",
+  },
+  {
+    number: "03",
+    title: "Penjadwalan Operasional",
+    description: "Koordinasi logistik yang presisi untuk menentukan jadwal armada penjemputan yang fleksibel, memastikan kelancaran rantai pasok dan operasional bisnis Anda tetap berjalan optimal tanpa gangguan.",
+  },
+  {
+    number: "04",
+    title: "Pengangkutan Aman (K3)",
+    description: "Pelaksanaan pengangkutan menggunakan armada khusus yang tersertifikasi, dikendalikan oleh operator ahli dengan standar K3 tinggi untuk menjamin integritas limbah selama perjalanan hingga ke tujuan akhir.",
+  },
+  {
+    number: "05",
+    title: "Pelaporan & Manifest Digital",
+    description: "Penyelesaian administrasi melalui integrasi sistem FESTRONIK KLHK, memberikan Anda manifest elektronik yang akurat sebagai bukti kepatuhan mutlak terhadap hukum dan tanggung jawab lingkungan.",
+  },
+]
+---
+
+<section id="workflow" class="bg-surface-container-low overflow-hidden py-24">
+  <div class="mx-auto max-w-7xl px-8">
+    <div class="mb-16 text-center">
+      <h2 class="mb-4 font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
+        Alur Kerja Kami
+      </h2>
+      <p class="mx-auto mb-6 max-w-2xl text-muted-foreground">
+        Proses terintegrasi dari konsultasi hingga pelaporan untuk pengelolaan limbah B3 yang profesional dan sesuai regulasi.
+      </p>
+      <div class="mx-auto h-1 w-20 rounded-full bg-primary"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+      {
+        steps.map((step, index) => (
+          <div class={`group relative ${index % 3 !== 0 ? 'lg:pl-8' : ''} ${index % 2 !== 0 ? 'md:pl-8 lg:pl-0' : ''} mb-12`}>
+            <div class="flex flex-col items-start lg:pr-12">
+              <div class="font-heading mb-6 text-6xl font-black text-primary/10 transition-colors group-hover:text-primary/20">
+                {step.number}
+              </div>
+              <h4 class="font-heading mb-4 text-xl font-bold text-foreground">
+                {step.title}
+              </h4>
+              <p class="font-sans text-sm leading-relaxed text-muted-foreground">
+                {step.description}
+              </p>
+            </div>
+            {index % 3 !== 2 && index < steps.length - 1 && (
+              <div class="absolute top-1/2 right-0 hidden h-24 w-px -translate-y-1/2 bg-border lg:block" />
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

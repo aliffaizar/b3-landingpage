@@ -1,0 +1,83 @@
+---
+import { Logo } from "@/components/logo"
+
+const currentYear = new Date().getFullYear();
+
+const footerLinks = [
+  {
+    title: "Layanan",
+    links: [
+      { label: "Limbah Tambang", href: "#services" },
+      { label: "Limbah Medis", href: "#services" },
+      { label: "Limbah Industri", href: "#services" },
+    ],
+  },
+  {
+    title: "Perusahaan",
+    links: [
+      { label: "Tentang Kami", href: "#about" },
+      { label: "Alur Kerja", href: "#workflow" },
+      { label: "FAQ", href: "#faq" },
+    ],
+  },
+  {
+    title: "Kontak",
+    links: [
+      { label: "Hubungi Kami", href: "#contact" },
+      { label: "Lokasi Kantor", href: "#" },
+      { label: "Kemitraan", href: "#" },
+    ],
+  },
+];
+---
+
+<footer class="bg-card pt-20 pb-10 border-t">
+  <div class="mx-auto max-w-7xl px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+      <div class="lg:col-span-2">
+        <div class="mb-6">
+          <Logo />
+        </div>
+        <p class="text-muted-foreground mb-6 max-w-md leading-relaxed">
+          Mitra terpercaya dalam pengelolaan dan pengangkutan limbah B3 profesional. Berizin resmi, aman, dan berkomitmen penuh terhadap keselamatan lingkungan di seluruh Indonesia.
+        </p>
+        <div class="flex gap-4">
+          <a href="#" class="h-10 w-10 flex items-center justify-center rounded-full bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="h-10 w-10 flex items-center justify-center rounded-full bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="h-10 w-10 flex items-center justify-center rounded-full bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      {footerLinks.map((section) => (
+        <div>
+          <h4 class="font-heading text-lg font-bold mb-6 text-foreground">{section.title}</h4>
+          <ul class="space-y-4">
+            {section.links.map((link) => (
+              <li>
+                <a href={link.href} class="text-muted-foreground hover:text-primary transition-colors duration-200">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="pt-8 border-t border-foreground/5 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-sm text-muted-foreground">
+        &copy; {currentYear} Nama Perusahaan. Seluruh hak cipta dilindungi.
+      </p>
+      <div class="flex gap-6">
+        <a href="#" class="text-xs text-muted-foreground hover:text-primary">Kebijakan Privasi</a>
+        <a href="#" class="text-xs text-muted-foreground hover:text-primary">Syarat & Ketentuan</a>
+      </div>
+    </div>
+  </div>
+</footer>

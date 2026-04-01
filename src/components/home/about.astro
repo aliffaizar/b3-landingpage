@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets"
+import aboutImage from "@/img/mine-waste.jpg"
+---
+
+<section id="about" class="bg-card py-24">
+  <div class="mx-auto max-w-7xl px-8">
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+      <div class="relative">
+        <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+          <Image
+            src={aboutImage}
+            alt="Tim profesional kami"
+            class="h-100 w-full object-cover lg:h-125"
+            width={800}
+            height={500}
+          />
+        </div>
+        <div
+          class="absolute -bottom-6 -left-6 h-32 w-32 rounded-2xl bg-primary/20"
+        >
+        </div>
+        <div
+          class="absolute -top-6 -right-6 h-24 w-24 rounded-full bg-primary/10"
+        >
+        </div>
+      </div>
+      <div>
+        <span
+          class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-bold tracking-widest text-primary uppercase"
+        >
+          Tentang Kami
+        </span>
+        <h2
+          class="mb-6 font-heading text-3xl font-bold tracking-tight text-foreground lg:text-4xl"
+        >
+          Kepatuhan Mutlak & <br />Mitigasi Risiko Terpercaya
+        </h2>
+        <p class="mb-4 leading-relaxed text-muted-foreground">
+          Kami adalah mitra strategis bagi industri dalam menavigasi kompleksitas regulasi limbah B3. Dengan fokus pada kepatuhan mutlak dan keselamatan kerja (K3), kami memastikan setiap ton limbah Anda dikelola tanpa risiko hukum bagi perusahaan.
+        </p>
+        <p class="mb-8 leading-relaxed text-muted-foreground">
+          Seluruh tim kami adalah profesional bersertifikasi yang mengedepankan standar keamanan tertinggi, mulai dari audit awal hingga manifest elektronik akhir.
+        </p>
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <div class="mb-2 text-3xl font-bold text-primary">10+</div>
+            <div class="text-sm text-muted-foreground">Tahun Pengalaman</div>
+          </div>
+          <div>
+            <div class="mb-2 text-3xl font-bold text-primary">50k+</div>
+            <div class="text-sm text-muted-foreground">Ton Limbah Terkelola</div>
+          </div>
+          <div>
+            <div class="mb-2 text-3xl font-bold text-primary">100%</div>
+            <div class="text-sm text-muted-foreground">Berizin Resmi KLHK</div>
+          </div>
+          <div>
+            <div class="mb-2 text-3xl font-bold text-primary">0</div>
+            <div class="text-sm text-muted-foreground">Insiden Lingkungan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

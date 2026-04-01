@@ -1,0 +1,91 @@
+---
+const contactInfo = [
+  {
+    title: "WhatsApp",
+    value: "+62 812 3456 7890",
+    description: "Respon cepat via pesan teks",
+    href: "https://wa.me/6281234567890",
+    icon: "chat",
+    color: "bg-green-500/10 text-green-600"
+  },
+  {
+    title: "Email",
+    value: "info@perusahaanb3.co.id",
+    description: "Untuk penawaran resmi & kontrak",
+    href: "mailto:info@perusahaanb3.co.id",
+    icon: "mail",
+    color: "bg-blue-500/10 text-blue-600"
+  },
+  {
+    title: "Telepon Kantor",
+    value: "(021) 1234 5678",
+    description: "Senin - Jumat, 08:00 - 17:00",
+    href: "tel:02112345678",
+    icon: "phone_in_talk",
+    color: "bg-primary/10 text-primary"
+  }
+];
+---
+
+<section id="contact" class="py-24 bg-background">
+  <div class="mx-auto max-w-7xl px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="mb-4 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-bold tracking-widest text-primary uppercase">
+          Hubungi Kami
+        </span>
+        <h2 class="mb-6 font-heading text-4xl font-bold tracking-tight text-foreground lg:text-5xl">
+          Siap Membantu Pengelolaan <span class="text-primary">Limbah B3</span> Anda
+        </h2>
+        <p class="mb-10 text-lg leading-relaxed text-muted-foreground">
+          Tim ahli kami siap memberikan konsultasi gratis mengenai kebutuhan pengangkutan dan pengelolaan limbah berbahaya bagi industri Anda.
+        </p>
+
+        <div class="grid gap-6">
+          {contactInfo.map((item) => (
+            <a 
+              href={item.href}
+              class="group flex items-start gap-4 rounded-2xl border border-foreground/5 bg-card p-6 transition-all hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5"
+            >
+              <div class={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${item.color} transition-transform group-hover:scale-110`}>
+                <span class="material-symbols-outlined text-2xl">{item.icon}</span>
+              </div>
+              <div>
+                <h3 class="font-heading text-lg font-bold text-foreground">{item.title}</h3>
+                <p class="mb-1 text-primary font-semibold">{item.value}</p>
+                <p class="text-sm text-muted-foreground">{item.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="relative overflow-hidden rounded-[2.5rem] bg-muted aspect-square lg:aspect-auto lg:h-[600px] shadow-2xl shadow-primary/10">
+          <!-- Placeholder for Map/Office Image -->
+          <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center p-12">
+            <div class="text-center">
+              <div class="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-background shadow-xl">
+                <span class="material-symbols-outlined text-4xl text-primary">location_on</span>
+              </div>
+              <h3 class="mb-4 font-heading text-2xl font-bold text-foreground">Lokasi Kantor</h3>
+              <p class="text-muted-foreground leading-relaxed max-w-xs mx-auto">
+                Jl. Industri Raya No. 123, Kawasan Industri Jababeka, <br/>Cikarang, Bekasi, Jawa Barat 17530
+              </p>
+              <div class="mt-8">
+                <button class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90">
+                  Lihat di Google Maps
+                  <span class="material-symbols-outlined text-sm">open_in_new</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Decorative accents -->
+          <div class="absolute top-8 right-8 h-32 w-32 rounded-full border border-primary/20"></div>
+          <div class="absolute -bottom-12 -left-12 h-64 w-64 rounded-full bg-primary/5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

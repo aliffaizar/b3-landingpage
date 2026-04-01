@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets"
+---
+
+<section
+  id="hero"
+  class="relative overflow-hidden bg-background pt-32 pb-20 lg:pt-48 lg:pb-32"
+>
+  <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-8 lg:grid-cols-12">
+    <div class="z-10 lg:col-span-7">
+      <span class="bg-primary-container/10 mb-2 inline-block rounded-full px-3 py-1 text-xs font-bold tracking-widest text-primary uppercase">
+        Kepatuhan Regulasi & Keselamatan
+      </span>
+      <h1 class="mb-8 font-heading text-4xl font-extrabold leading-[1.1] tracking-tighter text-foreground lg:text-6xl">
+        Kelola Limbah B3 <br />
+        <span class="text-primary">Tanpa Risiko Hukum:</span> <br />
+        Pengangkutan Berizin KLHK & Aman.
+      </h1>
+      <p class="text-md mb-10 max-w-xl font-sans leading-relaxed text-muted-foreground lg:text-lg">
+        Hilangkan kekhawatiran sanksi hukum dengan layanan pengangkutan yang memprioritaskan kepatuhan mutlak pada regulasi KLHK dan standar keselamatan tertinggi.
+      </p>
+      <div class="flex flex-col gap-4 sm:flex-row">
+        <a
+          href="#contact"
+          class="inline-flex shrink-0 items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/80"
+        >
+          Konsultasi Sekarang
+        </a>
+      </div>
+    </div>
+    <div class="relative lg:col-span-5">
+      <div class="relative overflow-hidden rounded-[1.5rem] shadow-2xl">
+        <Image
+          alt="Professional Hazardous Waste Truck"
+          class="h-[500px] w-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqWvJmFVSlXGX9U-E-PtZuKleHfrD4CBJnN7V42lJ0v6gkBbrK1CG_ARAoVPbl2h3mFMJnkQxbOfcAHnq4sfvpGFd2E-_KQpox85TcQmWuH7cLgvWPo-R2Tl0vsDbQn7IzPkYp00TQdfpI9MnUsyEVRdCfBS09uOORHI_lGxU4aB0PnnFn3bsqYiHGxVJqx5hXbWVMitl62NJpuxtbbVjMA5JK3AavpMmC_20uFXQgMsUUfQA9YZ0LHL4ZKCa22ccQ9tQtscIAoVk"
+          width={800}
+          height={500}
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+      </div>
+
+      <div class="bg-primary-container absolute -right-6 -bottom-6 -z-10 h-32 w-32 rounded-2xl opacity-20"></div>
+    </div>
+  </div>
+</section>
